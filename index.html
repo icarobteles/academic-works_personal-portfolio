@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Ícaro | Portfólio Pessoal</title>
+
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header--content">
+        <h1 class="header--title">Ícaro</h1>
+        <nav>
+          <ul class="header--navlist">
+            <li class="header--navitem">
+              <a class="header--navlink" href="#about" title="Sobre">Sobre</a>
+            </li>
+            <li class="header--navitem">
+              <a class="header--navlink" href="#projects" title="Projetos"
+                >Projetos</a
+              >
+            </li>
+            <li class="header--navitem">
+              <a
+                class="header--navlink"
+                href="#experiences"
+                title="Experiências"
+                >Experiências</a
+              >
+            </li>
+            <li class="header--navitem">
+              <a class="header--navlink" href="#contact" title="Contato"
+                >Contato</a
+              >
+            </li>
+            <li class="header--navitem">
+              <a
+                class="header--navlink"
+                href="https://www.github.com/icarobteles"
+                target="_blank"
+                title="Portfólio"
+                >Portfólio</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main">
+      <section id="about" class="about">
+        <h2 class="title title__orange">Sobre Mim</h2>
+
+        <div class="about--content">
+          <img
+            class="about--content--image"
+            src="./assets/profile.jpg"
+            alt="Ícaro Teles"
+          />
+          <p class="about--content--description">
+            Olá, meu nome é Ícaro e sou desenvolvedor web. Sou apaixonado por
+            tecnologia e estou sempre em busca de novos desafios. Atualmente
+            estou estudando para me tornar um desenvolvedor fullstack e estou em
+            busca de novas oportunidades para trabalhar em projetos inovadores.
+          </p>
+
+          <p class="about--content--description">
+            Olá, meu nome é Ícaro e sou desenvolvedor web. Sou apaixonado por
+            tecnologia e estou sempre em busca de novos desafios. Atualmente
+            estou estudando para me tornar um desenvolvedor fullstack e estou em
+            busca de novas oportunidades para trabalhar em projetos inovadores.
+          </p>
+        </div>
+      </section>
+
+      <section id="projects" class="projects">
+        <h2 class="title title__orange">Projetos</h2>
+
+        <ul class="projects--list">
+          <li class="projects--card">
+            <a class="projects--card--link" href="">
+              <img
+                class="projects--card--image"
+                src="./assets/project1.jpg"
+                alt="Projeto 1"
+              />
+              <section class="projects--card--info">
+                <h3>
+                  <span>Clique aqui para visitar</span>
+                  Projeto 1
+                </h3>
+                <i aria-label="Visitar Projeto"></i>
+              </section>
+            </a>
+          </li>
+          <li class="projects--card">
+            <a class="projects--card--link" href="">
+              <img
+                class="projects--card--image"
+                src="./assets/project1.jpg"
+                alt="Projeto 1"
+              />
+              <section class="projects--card--info">
+                <h3>
+                  <span>Clique aqui para visitar</span>
+                  Projeto 1
+                </h3>
+                <i aria-label="Visitar Projeto"></i>
+              </section>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <section id="experiences" class="experiences">
+        <h2 class="title title__blue">Experiências</h2>
+
+        <ul class="experiences--list">
+          <li class="experiences--card">
+            <h3 class="experiences--card--title">
+              Tutor em Desenvolvimento Web
+            </h3>
+            <h4 class="experiences--card--company">Coderhouse</h4>
+            <p class="experiences--card--description">
+              As a Senior Software Engineer at Google, I played a pivotal role
+              in developing innovative solutions for Google's core search
+              algorithms. Collaborating with a dynamic team of engineers, I
+              contributed to the enhancement of search accuracy and efficiency,
+              optimizing user experiences for millions of users worldwide.
+            </p>
+          </li>
+
+          <li class="experiences--card">
+            <h3 class="experiences--card--title">
+              Tutor em Desenvolvimento Web
+            </h3>
+            <h4 class="experiences--card--company">Coderhouse</h4>
+            <p class="experiences--card--description">
+              As a Senior Software Engineer at Google, I played a pivotal role
+              in developing innovative solutions for Google's core search
+              algorithms. Collaborating with a dynamic team of engineers, I
+              contributed to the enhancement of search accuracy and efficiency,
+              optimizing user experiences for millions of users worldwide.
+            </p>
+          </li>
+        </ul>
+      </section>
+
+      <section id="contact" class="contact">
+        <h2 class="title title__green">Contato</h2>
+
+        <form class="contact--form">
+          <div class="contact--form--group">
+            <label for="name" class="contact--form--label">Nome</label>
+            <input
+              type="text"
+              id="name"
+              class="contact--form--input"
+              placeholder="Digite seu nome"
+            />
+            <span class="contact--form--error"></span>
+          </div>
+
+          <div class="contact--form--group">
+            <label for="email" class="contact--form--label">E-mail</label>
+            <input
+              type="email"
+              id="email"
+              class="contact--form--input"
+              placeholder="Digite seu e-mail"
+            />
+            <span class="contact--form--error"></span>
+          </div>
+
+          <div class="contact--form--group">
+            <label for="message" class="contact--form--label">Mensagem</label>
+            <textarea
+              id="message"
+              class="contact--form--textarea"
+              placeholder="Digite sua mensagem"
+            ></textarea>
+            <span class="contact--form--error"></span>
+          </div>
+
+          <button class="contact--form--button" type="submit">Enviar</button>
+        </form>
+      </section>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>
