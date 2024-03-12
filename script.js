@@ -56,5 +56,11 @@ document.addEventListener("DOMContentLoaded", async () => {
   const contactForm = document.getElementById("contact-form");
   contactForm.addEventListener("submit", submitContactForm);
 
+  const hambBtn = document.getElementById("hamb-btn");
+  const hambMenu = document.getElementById("hamb-menu");
+  hambBtn.addEventListener("click", () => {
+    hambMenu.classList.toggle("hidden");
+  });
+
   renderProjects(projectsToBeRenderized.slice(0, 4));
 });
