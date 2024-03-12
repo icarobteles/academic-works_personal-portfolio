@@ -1,6 +1,6 @@
-async function getProjects(page, perPage) {
+async function getProjects() {
   const response = await fetch(
-    `https://api.github.com/users/icarobteles/repos?per_page=${perPage}&page=${page}`
+    `https://api.github.com/users/icarobteles/repos`
   );
   const data = await response.json();
   return data;
@@ -17,10 +17,10 @@ function renderProjects(projects) {
       .map((word) => word[0].toUpperCase() + word.slice(1))
       .join(" ");
     item.innerHTML = `
-      <a class="projects--card--link" href=${project.html_url}>
+      <a class="projects--card--link" href=${project.homepage}>
         <img
           class="projects--card--image"
-          src="./assets/project1.jpg"
+          src="./assets/projects/${project.name}.png"
           alt=${title}
         />
         <section class="projects--card--info">
@@ -36,7 +36,25 @@ function renderProjects(projects) {
   });
 }
 
+function submitContactForm(event) {
+  event.preventDefault();
+  const formData = new FormData(event.target);
+  const data = {};
+  for (const [key, value] of formData) {
+    data[key] = value;
+  }
+  alert("Mensagem enviada com sucesso!");
+  event.target.reset();
+}
+
 document.addEventListener("DOMContentLoaded", async () => {
-  const projects = await getProjects(1, 2);
-  renderProjects(projects);
+  const projects = await getProjects();
+  const projectsToBeRenderized = projects.filter(
+    (project) => !!project.homepage
+  );
+
+  const contactForm = document.getElementById("contact-form");
+  contactForm.addEventListener("submit", submitContactForm);
+
+  renderProjects(projectsToBeRenderized.slice(0, 4));
 });

@@ -51,6 +51,7 @@ body {
   min-height: 100dvh;
   background-color: var(--bg);
   overflow-x: hidden;
+  padding-bottom: 2rem;
 }
 
 .header {
@@ -85,7 +86,7 @@ body {
 .header--navlist {
   display: flex;
   align-items: center;
-  gap: 44px;
+  gap: 22px;
 }
 
 .header--navitem {
@@ -206,9 +207,11 @@ main .title__green {
   height: 235px;
   aspect-ratio: 16/9;
   object-fit: cover;
+  text-align: center;
 }
 
 .projects--card--info {
+  height: 100%;
   padding: 12px 24px;
   display: flex;
   justify-content: space-between;
@@ -216,8 +219,8 @@ main .title__green {
 }
 
 .projects--card--info > h3 {
-  font-size: 1.125rem;
-  font-weight: 800;
+  font-size: 1rem;
+  font-weight: 700;
   color: var(--text);
 }
 
@@ -317,6 +320,7 @@ main .title__green {
 
 .contact--form--textarea {
   outline: none;
+  min-height: 100px;
   padding: 12px 18px;
   border-radius: 8px;
   border: 1px solid var(--bg-header);
@@ -389,9 +393,9 @@ main .title__green {
   }
 
   .projects--list {
-    display: flex;
-    flex-direction: row;
-    gap: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(auto-fill, 300px);
   }
 
   .experiences--card {
